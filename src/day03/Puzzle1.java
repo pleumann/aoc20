@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Tobbogan Trajectory 1
+ * Tobbogan Trajectory 1.
  */
 public class Puzzle1 {
     

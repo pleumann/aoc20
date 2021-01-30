@@ -1,9 +1,11 @@
 package day03;
 
 /**
- * Tobbogan Trajectory 2
+ * Tobbogan Trajectory 2. Basically a generalized variant of part 1.
  */
 public class Puzzle2 extends Puzzle1 {
+    
+    // Note: loadInput() method inherited from Puzzle 1.
     
     int checkSlope(int right, int down) {
         int count = 0;
