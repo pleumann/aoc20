@@ -5,6 +5,8 @@ package day04;
  */
 public class Puzzle2 extends Puzzle1 {
 
+    // Note: loadInput() and checkPassports() method inherited from Puzzle1.
+    
     String getField(String s, String key) {
         int i = s.indexOf(key + ':');
         if (i == -1) {
