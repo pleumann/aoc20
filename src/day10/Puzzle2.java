@@ -6,32 +6,32 @@ package day10;
 public class Puzzle2 extends Puzzle1 {
 
     long solve2() {
-        int one = 0;        // Joltage of previous adapter we looked at 
-        int two = 999;      // Joltage of adapter we looked at before "one"
-        int three = 999;    // Joltage of adapter we looked at before "two"
+        int oneJolts = 0;      // Joltage of previous adapter we looked at 
+        int twoJolts = 999;    // Joltage of adapter we looked at before "one"
+        int threeJolts = 999;  // Joltage of adapter we looked at before "two"
 
-        long oneWays = 1;   // Possible ways to build chain up to "one"
-        long twoWays = 1;   // Possible ways to build chain up to "two"
-        long threeWays = 1; // Possible ways to build chain up to "three"
+        long oneWays = 1;      // Possible ways to build chain up to "one"
+        long twoWays = 1;      // Possible ways to build chain up to "two"
+        long threeWays = 1;    // Possible ways to build chain up to "three"
         
         for (int jolts: adapters) {
             long ways = 0;
 
-            System.out.println("jolts=" + jolts + " " + one + "/" + two + "/" + three);
+            System.out.println("jolts=" + jolts + " " + oneJolts + "/" + twoJolts + "/" + threeJolts);
             
             // Look at ways of extending chains leading to three previous adapters.
-            if (jolts - 1 == one || jolts - 2 == one || jolts - 3 == one) {
+            if (jolts - 1 == oneJolts || jolts - 2 == oneJolts || jolts - 3 == oneJolts) {
                 ways = ways + oneWays;
             }
-            if (jolts - 2 == two || jolts - 3 == two) {
+            if (jolts - 2 == twoJolts || jolts - 3 == twoJolts) {
                 ways = ways + twoWays;
             }
-            if (jolts - 3 == three) {
+            if (jolts - 3 == threeJolts) {
                 ways = ways + threeWays;
             }
 
-            // Adjust our "gliding window"
-            three = two; two = one; one = jolts;
+            // Adjust our "sliding window"
+            threeJolts = twoJolts; twoJolts = oneJolts; oneJolts = jolts;
             threeWays = twoWays; twoWays = oneWays; oneWays = ways;
         }
         
