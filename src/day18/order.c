@@ -21,7 +21,7 @@
 #include <ctype.h>
 
 #ifdef Z80
-#pragma printf = "%s %llu %lld %d %u"
+#pragma printf = "%s %llu %d"
 #endif
 
 int rules;          // 0 = normal math, 1 = no precedences, 2 = '+' over '*'
