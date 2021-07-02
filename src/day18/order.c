@@ -2,13 +2,17 @@
  * Operation Order parts 1 and 2. Old-school solution using recursive descent
  * parsing and on-the-fly processing.
  *
- * Compile for CP/M using
+ * Compile for CP/M target using
  *
- * zcc +cpm -compiler=sdcc -v -SO3 --max-allocs-per-node200000 -Cz"--clean" -create-app order.c -o order.com
+ *   zcc +cpm -v -Cz"--clean" -create-app order.c -o order.com
  *
- * or
+ * or for native Next target using
  *
- * zcc +cpm -v -Cz"--clean" -create-app order.c -o order.com
+ *   zcc +zxn -v -clib=classic -lesxdos -Cz"--clean" -subtype=tap -create-app order.c -o order.tap
+ *
+ * The following options might result in faster code being generated:
+ *
+ *   -compiler=sdcc -SO3 --max-allocs-per-node200000
  */
 
 #include <stdio.h>
