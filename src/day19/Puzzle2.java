@@ -22,10 +22,10 @@ public class Puzzle2 extends Puzzle1 {
         // example typically used in CS lectures to draw the boundary
         // between regular and context-free languages.
         //
-        // Some regex implementations actually do support that, doubtless
-        // by applying dark magic. Java does not, so we need a bit of
-        // Kobayashi Maru here - aka we're cheating. How many repetitions can
-        // one actually need? Turns out 6 are anough. ;)
+        // Some regex implementations manage to support this, doubtless by
+        // applying dark magic. Java does not, so we need a bit of Kobayashi 
+        // Maru here - aka we're cheating. How many repetitions does one really
+        // need? Turns out 6 are enough. ;)
 
         rules.put("11", " 42 31 |  42 42 31 31 |  42 42 42 31 31 31 | 42 42 42 42 31 31 31 31 |  42 42 42 42 42 31 31 31 31 31 |  42 42 42 42 42 42 31 31 31 31 31 31 ");
 
