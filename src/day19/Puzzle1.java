@@ -68,13 +68,14 @@ public class Puzzle1 {
         String regex = transform();
         System.out.println(regex);
 
+        Pattern p = Pattern.compile(regex);
         int count = 0;
 
         String s = reader.readLine();
         while (s != null) {
             System.out.println(s);
             
-            if (s.matches(regex)) {
+            if (p.matcher(s).matches()) {
                 count++;
                 System.out.println("YES");
             } else {
