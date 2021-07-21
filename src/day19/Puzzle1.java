@@ -59,7 +59,6 @@ public class Puzzle1 {
             s = reader.readLine();
         }
     }
-
     
    /**
     * Check the messages against a regex produced from the rules.
@@ -88,6 +87,9 @@ public class Puzzle1 {
         System.out.println("Valid messages: " + count);
     }
 
+    /**
+     * Solves the puzzle for the given input.
+     */
     void process(String file) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
