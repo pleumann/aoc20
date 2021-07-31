@@ -170,7 +170,7 @@ class Tile {
     /**
      * Marks a monster at the given position.
      */
-    public boolean mark(int x, int y, char[][] monster) {
+    public void mark(int x, int y, char[][] monster) {
         for (int i = 0; i < monster.length; i++) {
             for (int j = 0; j < monster[i].length; j++) {
                 char c = monster[i][j];
@@ -180,7 +180,6 @@ class Tile {
                 }
             }
         }
-        return true;
     }
 
     /**
