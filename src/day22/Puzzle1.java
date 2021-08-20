@@ -69,12 +69,12 @@ public class Puzzle1 {
             System.out.println("Player 2: " + p2);
 
             if (player1.isEmpty()) {
-                System.out.println("Player 1 out of cards. Player 2 wins.");
+                System.out.println("Player 1 out of cards. Player 2 wins game.");
                 return 2;
             }
 
             if (player2.isEmpty()) {
-                System.out.println("Player 2 out of cards. Player 1 wins.");
+                System.out.println("Player 2 out of cards. Player 1 wins game.");
                 return 1;
             }
 
