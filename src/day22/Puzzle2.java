@@ -46,22 +46,14 @@ public class Puzzle2 extends Puzzle1 {
                 return 1;
             }
 
-            Integer i1 = player1.get(0);
-            player1.remove(0);
-
-            Integer i2 = player2.get(0);
-            player2.remove(0);
+            int i1 = player1.remove(0);
+            int i2 = player2.remove(0);
 
             if (player1.size() >= i1 && player2.size() >= i2) {
                 Puzzle2 sub = new Puzzle2(game + 1);
 
-                for (int i = 0; i < i1; i++) {
-                    sub.player1.add(player1.get(i));
-                }
-
-                for (int i = 0; i < i2; i++) {
-                    sub.player2.add(player2.get(i));
-                }
+                sub.player1.addAll(player1.subList(0, i1));
+                sub.player2.addAll(player2.subList(0, i2));
 
                 System.out.println("Sub-game " + sub.game + " started.");
 

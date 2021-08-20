@@ -48,7 +48,7 @@ public class Puzzle1 {
         
         int score = 0;
         int factor = cards.size();
-        for (Integer i : cards) {
+        for (int i : cards) {
             result = result + " " + i;
             score = score + i * factor--;
         }
@@ -78,11 +78,8 @@ public class Puzzle1 {
                 return 1;
             }
 
-            Integer i1 = player1.get(0);
-            player1.remove(0);
-
-            Integer i2 = player2.get(0);
-            player2.remove(0);
+            int i1 = player1.remove(0);
+            int i2 = player2.remove(0);
 
             if (i1 > i2) {
                 System.out.println("Player 1 wins round.");
