@@ -5,7 +5,7 @@ package day02;
  */
 public class Puzzle2 extends Puzzle1 {
     
-    // Note: loadInput() and checkPasswords() methods are inherited from Puzzle1.
+    // Note: process() method inherited from Puzzle1.
     
     @Override
     boolean isValid(String password) {
@@ -22,7 +22,6 @@ public class Puzzle2 extends Puzzle1 {
     
     public static void main(String[] args) {
         Puzzle2 p = new Puzzle2();
-        p.loadInput(args[0]);
-        p.checkPasswords();
+        p.process(args[0]);
     }
 }
