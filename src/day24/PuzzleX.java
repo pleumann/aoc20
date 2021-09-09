@@ -23,7 +23,7 @@ public class PuzzleX extends Puzzle2 {
      * Our main frame (aka window).
      */
     JFrame frame;
-
+    
     /**
      * Sets up our GUI. Nothing special here except an anonymous subclass of
      * JPanel with overridden paint() method that delegates to our paintGrid()
@@ -50,30 +50,37 @@ public class PuzzleX extends Puzzle2 {
         frame.setVisible(true);
     }
     
-    @Override
-    void setup(String s) {
-        super.setup(s);
-
-        panel.repaint(); // Sneak in a repaint after each setup string.
-
+    /**
+     * Have a break...
+     */
+    void sleep(int ms) {
         try {
-            Thread.sleep(10);
+            Thread.sleep(ms);
         } catch (InterruptedException e) {
             // Ignored
         }
     }
+
+    @Override
+    void setup(String s) {
+        super.setup(s);
+        
+        panel.repaint(); // Sneak in a repaint after each setup string.
+
+        sleep(25);
+    }
     
     @Override
-    void day() {
-        super.day();
-
+    void day(int i) {
+        if (i == 1) {
+            sleep(2500);
+        }
+        
+        super.day(i);
+        
         panel.repaint(); // Sneak in a repaint after each day performed.
 
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            // Ignored
-        }
+        sleep(250);
     }
     
     /**

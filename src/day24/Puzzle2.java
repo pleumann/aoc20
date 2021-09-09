@@ -29,7 +29,7 @@ public class Puzzle2 extends Puzzle1 {
      * an intermediate set of floor tiles to ensure all tiles are processed in
      * parallel before flipping.
      */
-    void day() {
+    void day(int i) {
         HashSet<String> newTiles = new HashSet();
         
         for (int y = -75; y < 75; y++) {
@@ -58,9 +58,9 @@ public class Puzzle2 extends Puzzle1 {
     @Override
     void process(String file) {
         super.process(file);
-            
+        
         for (int i = 1; i <= 100; i++) {
-            day();
+            day(i);
             System.out.printf("Day %3d = %4d\n", i, tiles.size());
         }
     }
